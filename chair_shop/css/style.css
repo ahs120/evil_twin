@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+main {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.cart-icon {
+  cursor: pointer;
+  i {
+    font-size: 20px;
+    &:hover {
+      transition: 0.3s;
+      transform: rotate(15deg);
+    }
+  }
+
+  & .cart-count {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+body.cart-active section.cart {
+  right: 0;
+}
+.cart {
+  display: flex;
+  flex-flow: column;
+  width: 350px;
+  height: 100vh;
+  top: 0;
+  transition: 0.3s;
+  right: -400px;
+  background-color: #303030;
+  color: #fff;
+  & h2.cart-title {
+    font-weight: 400;
+    letter-spacing: 1.6px;
+  }
+  & .cart-items {
+    height: 100%;
+    overflow-y: auto;
+    & ul {
+      height: 100%;
+      & li:nth-of-type(even) {
+        background-color: #404040;
+      }
+      & img {
+        width: 50px;
+      }
+      & .quantity {
+        button,
+        span {
+          background-color: #fff;
+          color: #303030;
+          width: 20px;
+          height: 20px;
+          display: inline-flex;
+          place-content: center;
+          place-items: center;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  & .controller {
+    & .close-cart,
+    & .checkout {
+      width: 50%;
+      font-weight: 500;
+    }
+    & .close-cart {
+    }
+    & .checkout {
+      background-color: goldenrod;
+    }
+  }
+}
+.hero {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  & .box {
+    background-color: rgb(238, 238, 230);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    & img {
+      width: 90%;
+      filter: drop-shadow(rgba(0, 0, 0, 0.6) 0px 50px 20px);
+    }
+    & h2 {
+      font-weight: 500;
+      font-size: large;
+    }
+    & p.product-price {
+      letter-spacing: 7px;
+      font-size: small;
+    }
+    & button {
+      background-color: rgb(53, 52, 50);
+      color: rgb(238, 238, 238);
+      margin-top: 10px;
+      border-width: initial;
+      border-style: none;
+      border-color: initial;
+      border-image: initial;
+      padding: 5px 10px;
+      border-radius: 20px;
+      transition: 0.3s;
+      &:hover {
+        background-color: rgb(50, 48, 46);
+        color: #ffffff;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+body.cart-active {
+  overflow: hidden;
+  & .cart {
+    right: 0;
+    transition: 0.3s;
+  }
+  & main {
+    transform: translateX(-350px);
+    transition: 0.3s;
+  }
+}

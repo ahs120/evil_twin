@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chair Shop</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/my-lip.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="p-relative">
+    <main>
+      <header class="d-flex jc-between ai-center p-15px mb-40px">
+        <h1 class="logo">Chair Shop</h1>
+        <div class="cart-icon p-relative">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span
+            class="d-flex jc-center ai-center cart-count p-absolute bg-danger c-light"
+            >0</span
+          >
+        </div>
+      </header>
+      <section class="hero">
+        <div class="box">
+          <img src="image/1.png" alt="chair-1" />
+          <h2 class="product-name">test test test</h2>
+          <p class="product-price">$200</p>
+          <button class="add-to-cart">Add To Cart</button>
+        </div>
+      </section>
+    </main>
+    <section class="cart p-absolute">
+      <h2 class="cart-title p-15px fs-32px w">Shopping Cart</h2>
+      <div class="cart-items">
+        <ul>
+          <li class="d-flex jc-between ai-center p-10px">
+            <img src="image/1.png" alt="chair-1" />
+            <p class="name">TEST TEST TEST</p>
+            <p class="price">$200</p>
+            <div class="quantity">
+              <button class="decrease">
+                <i class="fa-solid fa-angle-left"></i>
+              </button>
+              <span class="count">1</span>
+              <button class="increase">
+                <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="total p-10px d-flex jc-between ai-center bg-light c-dark">
+        Total
+        <p class="total-price">$400</p>
+      </div>
+      <div class="controller d-flex">
+        <button
+          class="close-cart bg-light c-dark p-20px d-flex jc-center ac-center"
+        >
+          Close Cart
+        </button>
+        <button class="checkout p-20px d-flex jc-center ac-center">
+          Checkout
+        </button>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
+
+    </script>
+  </body>
+</html>
